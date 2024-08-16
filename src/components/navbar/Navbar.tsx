@@ -1,19 +1,19 @@
-import React from 'react'
-
+import { Link } from "react-router-dom"
 
 function Navbar() {
- 
-  
 
   return (
     <>
      <div className=' w-full flex justify-center bg-[#1f2937] text-white py-2 border-t-2 border-[#bbbbbb] px-10'>
           <div className="container flex justify-between text-lg">
-            <div className='text-2xl font-bold uppercase'>Farmacia CRUD</div>
+            <Link to={'/home'}> <div className='text-2xl font-bold uppercase'>Farmacia CRUD</div></Link>
             <div className='flex gap-4'>
+                
               <div className='hover:underline'>Produtos</div>
-              <div className='hover:underline'>Categorias</div>
-              <div className='hover:underline'>Cadastrar categorias</div>
+
+              <Link to='/categorias' className='hover:underline'>Categorias</Link>
+
+              <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar categoria</Link>
             </div>
           </div>
         </div>
